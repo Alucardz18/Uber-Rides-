@@ -28,6 +28,22 @@ A sample of Uber ride data with the following columns:
 - MONTH: mapped month label from date
 - DAYS: mapped weekday name from date
 
+  # 🔑 Key Findings from Uber Rides Data Analysis
+1. Trip Purpose and Category
+- Primary Demand: The majority of rides were booked for business purposes.  
+- Top Purposes: The most common reasons for booking a ride are for Meetings and Meal/Entertainment.  
+- Correlation: The encoded Business and Personal ride categories were highly negatively correlated, which confirms that a trip is typically classified as one or the other. Other features showed little to no strong correlation.  
+
+2. Time-Based Trends
+- Peak Time of Day: The majority of trips occurred during the Afternoon (10 AM – 5 PM), suggesting peak usage during standard business hours.  
+- Seasonal Drop: Ride counts were irregular across the months, but there was a distinct drop in ride frequency during November, December, and January, which the analysis attributed to winter.  
+
+3. Distance and Usage Patterns
+- Average Distance: Most cabs were booked for short distances, primarily around 4–5 miles.  
+- Distance Range: The majority of all rides fell within the 0–20 miles range.  
+- Long Trips: Rides exceeding 20 miles had negligible counts, indicating the service is overwhelmingly used for shorter, local travel.
+
+
 # Visualization :bar_chart:
 1. Categorical Distributions
     * Count of rides by CATEGORY
@@ -49,26 +65,6 @@ A sample of Uber ride data with the following columns:
     - Zoomed Boxplot: Miles under 100
     - Histogram: Miles under 40
   
-# Insights & Observations 👀
-
-- From Count Plots:
-    - Most rides were booked for business purposes.
-    - The most common purposes for booking were Meetings and Meal/Entertainment.
-    - The majority of rides occurred between 10 AM – 5 PM (Afternoon).
-
-- From Heatmap:
-    - Business and Personal ride categories were highly negatively correlated, confirming earlier findings.
-    - Other features did not show strong correlations with each other.
-
-- From Monthly Trends:
-    - Ride counts were irregular across months.
-    - Fewer rides were observed in November, December, and January, likely due to winter in Florida, US.
-
-- From Distance Analysis:
-    - Most cabs were booked for short distances around 4–5 miles.
-    - The majority of rides were within 0–20 miles.
-    - Very few rides exceeded 20 miles.
-
 # Data Preprocessing ⚙️
 - Missing PURPOSE values replaced with 'Unknown'
 - Converted START_DATE and END_DATE to datetime
